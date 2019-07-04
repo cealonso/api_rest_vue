@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vue.js load data with JSON</title>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+</head>
+<body>
+	<h1>Listado de Pedidos</h1>
+	<div id="app">
+		<button @click="getOrders()">Pedidos</button>
+		<ul>
+			<li v-for="order in dataOrders" :key="order.id">{{ order.product
+				}} , {{ order.quantity }}</li>
+		</ul>
+	</div>
+	<script src="main.js"></script>
+</body>
+</html>
